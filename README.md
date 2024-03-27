@@ -29,3 +29,17 @@ Project for Data Analysis Methods class. Used various types of data visulization
   * If you play an instrument, what instrument do you play?
   * What CS-related field do you prefer?
   * What is your least favorite part of Computer Science?
+
+# EDA
+## Correlations
+### Finding the correlation between GPA and Percieved Performance
+![image](https://github.com/AdreyanDistor/Student-Survey-Analysis/assets/117056281/ff8b84e6-0761-42d6-92a7-9bb1d454ae1a)
+
+Short Observation: It seems as GPA goes up, so does Percieved Performance
+
+## Distributions
+
+# Hypotheses
+
+# Conclusion and Improvements
+rmeooving outliers
