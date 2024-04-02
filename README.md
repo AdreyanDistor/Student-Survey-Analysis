@@ -29,6 +29,7 @@ Project for Data Analysis Methods class. Used various types of data visulization
   * If you play an instrument, what instrument do you play?
   * What CS-related field do you prefer?
   * What is your least favorite part of Computer Science?
+# Data Cleaning
 
 # EDA
 ## Correlations
