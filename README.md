@@ -31,6 +31,11 @@ Project for Data Analysis Methods class. Used various types of data visulization
   * What CS-related field do you prefer?
   * What is your least favorite part of Computer Science?
 # Data Cleaning
+What we did first was we filled in all the rows with "NA" Music_Years and GPA with 0's
+```python
+df.loc[:,'Music_Years'] = cleaned_df.loc[:,'Music_Years'].fillna(0)
+df.loc[:,'GPA'] = cleaned_df.loc[:,'GPA'].fillna(0)
+```
 
 # EDA
 ### Finding the correlation between GPA and Percieved Performance
