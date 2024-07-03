@@ -36,7 +36,10 @@ What we did first was we filled in all the rows with "NA" Music_Years and GPA wi
 df.loc[:,'Music_Years'] = cleaned_df.loc[:,'Music_Years'].fillna(0)
 df.loc[:,'GPA'] = cleaned_df.loc[:,'GPA'].fillna(0)
 ```
-
+Then we filled in an missing Percieved_Perfomance values with 0
+```python
+df.loc[:,'Perceived_Performance'] = cleaned_df.loc[:,'Perceived_Performance'].fillna(0)
+```
 # EDA
 ### Finding the correlation between GPA and Percieved Performance
 ![image](https://github.com/AdreyanDistor/Student-Survey-Analysis/assets/117056281/ff8b84e6-0761-42d6-92a7-9bb1d454ae1a)
