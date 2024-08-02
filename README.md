@@ -112,8 +112,21 @@ df.loc[df['Music_Years'] == '', 'Music_Years'] = '0'
 
 
 # Hypotheses and Correlation Analysis
-## Preferred Genre Correlation Matrix
+## Hypothesis 1: There is a correlation between the type of music you listen to and your favorite area of computer science
+**Null Hypothesis:** There is no correlation between the type of music people listen to and their favorite area of computer science. They are independent of one another.
+### Preferred Genre Correlation Matrix
 ![image](https://github.com/AdreyanDistor/Student-Survey-Analysis/assets/117056281/246e64aa-8608-42c2-9a25-ccd2e4d4a0af)
 
+``` python
+df_wo0 = df[df['GPA'] != '0']
+df_woNAN = df[df['Play_Instrument'] != 'NaN']
+
+gpa_instrument_table = pd.crosstab(df_wo0['GPA'], df_woNAN['Play_Instrument'])
+gpa_instrument_table
+```
+![alt text](image.png)
+
+## **Hypothesis #2:** There is a correlation between GPA and whether or not they play an instrument.
+**Null Hypothesis:** There is no correlation between GPA and whether or not they play an instrument. They are independent from one another.
 # Conclusion and Improvements
 removing outliers
