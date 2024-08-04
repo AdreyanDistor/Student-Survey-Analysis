@@ -116,7 +116,8 @@ df.loc[df['Music_Years'] == '', 'Music_Years'] = '0'
 **Null Hypothesis:** There is no correlation between the type of music people listen to and their favorite area of computer science. They are independent of one another.
 ### Preferred Genre Correlation Matrix
 ![image](https://github.com/AdreyanDistor/Student-Survey-Analysis/assets/117056281/246e64aa-8608-42c2-9a25-ccd2e4d4a0af)
-
+## **Hypothesis #2:** There is a correlation between GPA and whether or not they play an instrument.
+**Null Hypothesis:** There is no correlation between GPA and whether or not they play an instrument. They are independent from one another.
 ``` python
 df_wo0 = df[df['GPA'] != '0']
 df_woNAN = df[df['Play_Instrument'] != 'NaN']
@@ -124,9 +125,61 @@ df_woNAN = df[df['Play_Instrument'] != 'NaN']
 gpa_instrument_table = pd.crosstab(df_wo0['GPA'], df_woNAN['Play_Instrument'])
 gpa_instrument_table
 ```
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/fb02955b-bb5f-4486-960c-bd0c4cf49a3f)
 
-## **Hypothesis #2:** There is a correlation between GPA and whether or not they play an instrument.
-**Null Hypothesis:** There is no correlation between GPA and whether or not they play an instrument. They are independent from one another.
+Conclusion:
+Not correlation was found
+
+**(i)** The test I will be using is Chi Squared Analysis. Chi Squared Analysis will help indicate whether or not there IS a correlation and to see if our hypothesis holds:
+```python
+#(ii) Performing the Analysis
+chi2, p, dof, expected = chi2_contingency(gpa_instrument_table)
+
+# Display the results
+print("\nChi-squared Statistic:", chi2)
+print("P-value:", p)
+print("Degrees of Freedom:", dof)
+# Chi-squared Statistic: 2.3575285958061074
+# P-value: 0.5015896219883991
+# Degrees of Freedom: 3
+
+from scipy.stats import chi2_contingency, chi2
+chi2.ppf(0.5015896219883991, 3)
+#ouput: 2.3744398120911736
+```
+**Our Observation:** Given that our chi squared value of 2.3575285958061074 scores below our threshold value of 0.5015896219883991, we reject our hypothesis. This means that there is NO correlation between students who play instruments and their GPA. Those variables are independent from one another.
+
+
+
+## **Hypothesis #3:**
+
+**Our Hypothesis**: There is a correlation between percieved overall performance and those who listen to music while they do their homework.
+
+**Null Hypothesis**: There is no correlation between percieved performance and those who listen to music while they do their homework. They are independent from one another.
+
+```python
+perceivedPerformace_HW_table = pd.crosstab(df['Perceived_Performance'], df['Music&HW'])
+perceivedPerformace_HW_table
+```
+![image](https://github.com/user-attachments/assets/bc7180fd-1a4b-48ca-84a4-63cb8745c65d)
+
+```python
+#(ii) Performing the Analysis
+chi2, p, dof, expected = chi2_contingency(perceivedPerformace_HW_table)
+
+# Display the results
+print("\nChi-squared Value:", chi2)
+print("P-value:", p)
+print("Degrees of Freedom:", dof)
+
+# Chi-squared Value: 9.42384362795695
+# P-value: 0.3078113270342382
+# Degrees of Freedom: 8
+
+chi2.ppf(0.6603925485744833, 6)
+#6.801373325168482
+```
+
+**Our Observation:** Given that our chi squared value of 4.120358188252812 scores below our threshold value of 6.801373325168482, we reject our hypothesis. This means that there is NO correlation between students' percieved performance and their GPA. Those variables are independent from one another.
 # Conclusion and Improvements
 removing outliers
