@@ -9,6 +9,12 @@
 
 Project for Data Analysis Methods class. Used various types of data visulizations to understand data, and utilized hypothesis testing to answer our questions 
 # Libraries
+Numpy
+Pandas
+Matplotlib
+Scipy
+Sklearn
+Waterfall Chart
 
 # Our Data
 *  It was provided to us by our teacher after a survey was conducted, and shared with to 100's of different students
