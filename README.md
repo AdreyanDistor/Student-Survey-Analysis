@@ -181,5 +181,12 @@ chi2.ppf(0.6603925485744833, 6)
 ```
 
 **Our Observation:** Given that our chi squared value of 4.120358188252812 scores below our threshold value of 6.801373325168482, we reject our hypothesis. This means that there is NO correlation between students' percieved performance and their GPA. Those variables are independent from one another.
-# Conclusion and Improvements
-removing outliers
+
+
+# Conclusion
+We analyzed a lot of different aspects with the data we collected from the data we collected. In our data exploration, we gathered that the majority of students do listen to music while they do homework, however there doesn't seem to be a direct correlation between whether they listen to music and their performance in classes, nor is their any correlation between listening to music and how students feel about their own performance. There also wasn't any correlation between preferred genres of music to listen while working and GPA. We did find, however, that the data proves the assumption that people with higher GPA seem to have more confidence in their performance.
+
+For our 3 hypothesis, after testing our data, we have determined that there is no correlation between preferred CS field and preferred music genre, between GPA and whether they played an instrument, nor between students' percieved performance and their GPA.
+
+## Improvement
+Proper handling of missing and NA values.
